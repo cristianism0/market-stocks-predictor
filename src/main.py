@@ -13,8 +13,6 @@ inPortfolio = 10000 #dolars
 weights= np.random.random(len(meanReturns))
 weights /= np.sum(weights)
 
-#call Simulation
-
 def start_MC(inPortfolio,weights, meanReturns, covMatrix, MC_sim, T):
     """MC Simulation"""
     import numpy as np

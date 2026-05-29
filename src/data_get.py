@@ -15,7 +15,6 @@ def calc_returns(stocks):
     close_columns = [col for col in stocks.columns if 'Close' in col]
     close_prices = stocks[close_columns].copy()
     
-    # Renomeia colunas para ficar mais limpo: ('AAPL', 'Close') -> 'AAPL'
     close_prices.columns = [col[0] for col in close_prices.columns]
     
     returns = close_prices.pct_change().dropna()  
